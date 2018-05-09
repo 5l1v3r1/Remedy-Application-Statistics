@@ -108,9 +108,9 @@ If you are using more than three (3) Remedy application servers, then you will n
 Authors
 ----------------
 - Forms and workflow developed by James Van Sickle
-- Remedy Action Request System developed by BMC Software
-- Remedy IT Service Management Suite developed by BMC Software
-- BMC Smart Reporting developed by BMC Software
+- Remedy Action Request System developed by BMC Software Inc., © Copyright 2005-2018
+- Remedy IT Service Management Suite developed by BMC Software Inc., © Copyright 2005-2018
+- BMC Smart Reporting developed by BMC Software Inc., © Copyright 2005-2018
 
 Release
 ----------------
