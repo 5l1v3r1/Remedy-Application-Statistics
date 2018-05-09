@@ -16,14 +16,14 @@ Installation:
 ----------------
 
 - Import the DEF file into your Remedy Development environment
-- Open BMC Remedy Developer Studio application
-- Select File drop-down menu and choose Import
-- Follow the steps in the wizard to import all forms and workflow from the DEF file
+1. Open BMC Remedy Developer Studio application
+2. Select File drop-down menu and choose Import
+3. Follow the steps in the wizard to import all forms and workflow from the DEF file
 
 - Import the XML file into your BMC Smart Reporting Development environment
-- Login to BMC Smart Reporting using account with admin rights
-- Select Administration drop-down menu and choose Import
-- Upload the XML file and follow the steps in the wizard to import the custom Views, Reports, and Dashboards
+1. Login to BMC Smart Reporting using account with admin rights
+2. Select Administration drop-down menu and choose Import
+3. Upload the XML file and follow the steps in the wizard to import the custom Views, Reports, and Dashboards
 
 Post-Installation Updates:
 ----------------
