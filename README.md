@@ -4,6 +4,7 @@ Remedy Application Statistics
 Thank you for your interest....
 
 Some things to know:
+----------------
 
 - These forms and workflow were designed for exclusive use in the Remedy Action Request System developed and maintained by BMC Software.
 - The Remedy IT Service Management workflow package is recommended but not required if working with solely custom workflow.
@@ -12,6 +13,7 @@ Some things to know:
 - Forms and workflow should work in previous versions of Remedy.
 
 Installation:
+----------------
 
 - Import the DEF file into your Remedy Development environment
 - Open BMC Remedy Developer Studio application
@@ -24,6 +26,7 @@ Installation:
 - Upload the XML file and follow the steps in the wizard to import the custom Views, Reports, and Dashboards
 
 Post-Installation Updates:
+----------------
 
 Once the import of forms and workflow has been completed, you will need to adjust some workflow based on your environment. This workflow was built using a three Remedy application server environment. If you have more than three servers, some extra work might need to be involved to capture their statistical data as well.
 
@@ -73,6 +76,7 @@ Once the import of forms and workflow has been completed, you will need to adjus
 You should now be good to start collecting various statistics about your Remedy application's usage by users. Feedback and suggestions are always welcome.
 
 Expanding Beyond 3 Application Servers
+----------------
 
 If you are using more than three (3) Remedy application servers, then you will need to adjust more workflow to capture data from any other servers beyond the initial three. I prefer to use separate fields to capture data of each server on the forms LANL:ADM:Combined Application Statistics and LANL:ADM:Combined Server Statistics. However, you could potentially reuse existing fields even though this would make it harder to discern individual collected stats from each server when troubleshooting errors or conflicts.
 
