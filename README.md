@@ -30,44 +30,44 @@ Post-Installation Updates:
 
 Once the import of forms and workflow has been completed, you will need to adjust some workflow based on your environment. This workflow was built using a three Remedy application server environment. If you have more than three servers, some extra work might need to be involved to capture their statistical data as well.
 
-1. Update LANL:ADM:Combined Application Statistics form
-- Open form LANL:ADM:Combined Application Statistics form in BMC Remedy Developer Studio
-- Rename field "Check Server 1" to actual server name of your first application server
-- (if 2nd server present) Rename field "Check Server 2" to actual server name of your first application server
-- (if 3nd server present) Rename field "Check Server 3" to actual server name of your first application server
+- Update LANL:ADM:Combined Application Statistics form
+1. Open form LANL:ADM:Combined Application Statistics form in BMC Remedy Developer Studio
+2. Rename field "Check Server 1" to actual server name of your first application server
+3. (if 2nd server present) Rename field "Check Server 2" to actual server name of your first application server
+4. (if 3nd server present) Rename field "Check Server 3" to actual server name of your first application server
 
-2. Update LANL:ADM:Combined Server Statistics form
-- Open form LANL:ADM:Combined Server Statistics form in BMC Remedy Developer Studio
-- Rename field "Check Server 1" to actual server name of your first application server
-- (if 2nd server present) Rename field "Check Server 2" to actual server name of your first application server
-- (if 3nd server present) Rename field "Check Server 3" to actual server name of your first application server
+- Update LANL:ADM:Combined Server Statistics form
+1. Open form LANL:ADM:Combined Server Statistics form in BMC Remedy Developer Studio
+2. Rename field "Check Server 1" to actual server name of your first application server
+3. (if 2nd server present) Rename field "Check Server 2" to actual server name of your first application server
+4. (if 3nd server present) Rename field "Check Server 3" to actual server name of your first application server
 
-3. Update Filter Workflow
-- Update the follow Filters to ensure their Qualification statements properly reflect the changed field values from the previous steps.
-- LANL:ADM:Set Server Statistics Server 1
-- LANL:ADM:Set Server Statistics Server 2
-- LANL:ADM:Set Server Statistics Server 3
-- LANL:ADM:Set Application Statistics Server 1
-- LANL:ADM:Set Application Statistics Server 2
-- LANL:ADM:Set Application Statistics Server 3
+- Update Filter Workflow
+1. Update the follow Filters to ensure their Qualification statements properly reflect the changed field values from the previous steps.
+2. LANL:ADM:Set Server Statistics Server 1
+3. LANL:ADM:Set Server Statistics Server 2
+4. LANL:ADM:Set Server Statistics Server 3
+5. LANL:ADM:Set Application Statistics Server 1
+6. LANL:ADM:Set Application Statistics Server 2
+7. LANL:ADM:Set Application Statistics Server 3
 
-4. Update LANL:ADM:Set Statistic Status Completed
-- Update Filter LANL:ADM:Set Statistic Status Completed to reflect proper number actual servers in your environment.
-- (1 Server) ($Check Server 1$ != $NULL$)
-- (2 Server) ($Check Server 1$ != $NULL$) AND ($Check Server 2$ != $NULL$)
-- (3 Server) ($Check Server 1$ != $NULL$) AND ($Check Server 2$ != $NULL$) AND ($Check Server 3$ != $NULL$)
+- Update LANL:ADM:Set Statistic Status Completed
+1. Update Filter LANL:ADM:Set Statistic Status Completed to reflect proper number actual servers in your environment.
+2. (1 Server) ($Check Server 1$ != $NULL$)
+3. (2 Server) ($Check Server 1$ != $NULL$) AND ($Check Server 2$ != $NULL$)
+4. (3 Server) ($Check Server 1$ != $NULL$) AND ($Check Server 2$ != $NULL$) AND ($Check Server 3$ != $NULL$)
 
-5. Update LANL:ADM:Set App Stat Status Completed
-- Update Filter LANL:ADM:Set App Stat Status Completed to reflect proper number actual servers in your environment.
+- Update LANL:ADM:Set App Stat Status Completed
+1. Update Filter LANL:ADM:Set App Stat Status Completed to reflect proper number actual servers in your environment.
 
-6. Enable Server Statistics
-- Make sure that Server Statistics is enabled on your AR System Administration Console.
-- Workflow built around a setting of 300 seconds (5 minutes) Cumulative Queue collection.
+- Enable Server Statistics
+1. Make sure that Server Statistics is enabled on your AR System Administration Console.
+2. Workflow built around a setting of 300 seconds (5 minutes) Cumulative Queue collection.
 
-7. Enable Application Statistics
-- Login to your Remedy website using an account with admin rights.
-- Open form Application Statistics Configuration (may need to use Mid-Tier Object List).
-- Create entry for each Deployable Application to capture statistics on. For example:
+- Enable Application Statistics
+1. Login to your Remedy website using an account with admin rights.
+2. Open form Application Statistics Configuration (may need to use Mid-Tier Object List).
+3. Create entry for each Deployable Application to capture statistics on. For example:
 	Logging Status: Enabled
 	Logging Type: Application
 	Name: Remedy Incident Management
@@ -80,30 +80,30 @@ Expanding Beyond Three Application Servers
 
 If you are using more than three (3) Remedy application servers, then you will need to adjust more workflow to capture data from any other servers beyond the initial three. I prefer to use separate fields to capture data of each server on the forms LANL:ADM:Combined Application Statistics and LANL:ADM:Combined Server Statistics. However, you could potentially reuse existing fields even though this would make it harder to discern individual collected stats from each server when troubleshooting errors or conflicts.
 
-1. Form Updates LANL:ADM:Combined Server Statistics
-- Open the form LANL:ADM:Combined Server Statistics in BMC Remedy Developer Studio
-- Add new checkbox field "Check Server 4" or using actual server name
-- Add new Tab for each additional server in group to be collected
-- Copy fields from tab Server 1 into the new tab
-- Rename new fields accordingly (i.e. API Calls Count1 to API Calls Count4)
+- Form Updates LANL:ADM:Combined Server Statistics
+1. Open the form LANL:ADM:Combined Server Statistics in BMC Remedy Developer Studio
+2. Add new checkbox field "Check Server 4" or using actual server name
+3. Add new Tab for each additional server in group to be collected
+4. Copy fields from tab Server 1 into the new tab
+5. Rename new fields accordingly (i.e. API Calls Count1 to API Calls Count4)
 
-2. Repeat previous steps on form LANL:ADM:Combined Application Statistics
+- Repeat previous steps on form LANL:ADM:Combined Application Statistics
 
-3. Create Filter LANL:ADM:Set Server Statistics Server 4
-- Copy filter LANL:ADM:Set Server Statistics Server 1 to LANL:ADM:Set Server Statistics Server 4
-- Update Qualification to reflect the fourth server name in your server group
-- Update Push If Qualification to use new "Check Server 4" field
-- Update Push To Fields to direct data to newly created fields (i.e. $Create Entry Calls Count4$ = $Create Entry Calls Count$)
+- Create Filter LANL:ADM:Set Server Statistics Server 4
+1. Copy filter LANL:ADM:Set Server Statistics Server 1 to LANL:ADM:Set Server Statistics Server 4
+2. Update Qualification to reflect the fourth server name in your server group
+3. Update Push If Qualification to use new "Check Server 4" field
+4. Update Push To Fields to direct data to newly created fields (i.e. $Create Entry Calls Count4$ = $Create Entry Calls Count$)
 
-4. Repeat previous step for LANL:ADM:Set Application Statistics Server 4
+- Repeat previous step for LANL:ADM:Set Application Statistics Server 4
 
-5. Update LANL:ADM:Set Statistic Status Completed
-- Update Qualification to reflect newly created "Check Server 4" field on form LANL:ADM:Combined Server Statistics
+- Update LANL:ADM:Set Statistic Status Completed
+1. Update Qualification to reflect newly created "Check Server 4" field on form LANL:ADM:Combined Server Statistics
 
-6. Update LANL:ADM:Set App Stat Status Completed
-- Update Qualification to reflect newly created "Check Server 4" field on form LANL:ADM:Combined Application Statistics
+- Update LANL:ADM:Set App Stat Status Completed
+1. Update Qualification to reflect newly created "Check Server 4" field on form LANL:ADM:Combined Application Statistics
 
-7. Repeat for each additional Remedy Application Server.
+- Repeat for each additional Remedy Application Server.
 
 Authors
 ----------------
