@@ -75,7 +75,7 @@ Once the import of forms and workflow has been completed, you will need to adjus
 
 You should now be good to start collecting various statistics about your Remedy application's usage by users. Feedback and suggestions are always welcome.
 
-Expanding Beyond 3 Application Servers
+Expanding Beyond Three Application Servers
 ----------------
 
 If you are using more than three (3) Remedy application servers, then you will need to adjust more workflow to capture data from any other servers beyond the initial three. I prefer to use separate fields to capture data of each server on the forms LANL:ADM:Combined Application Statistics and LANL:ADM:Combined Server Statistics. However, you could potentially reuse existing fields even though this would make it harder to discern individual collected stats from each server when troubleshooting errors or conflicts.
