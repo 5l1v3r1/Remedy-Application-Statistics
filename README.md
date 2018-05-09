@@ -6,11 +6,11 @@ Thank you for your interest....
 Some things to know:
 ----------------
 
+- Forms and workflow developed using Remedy version 9.x.
+- Forms and workflow should work in previous versions of Remedy.
 - These forms and workflow were designed for exclusive use in the Remedy Action Request System developed and maintained by BMC Software.
 - The Remedy IT Service Management workflow package is recommended but not required if working with solely custom workflow.
 - BMC Smart Reporting application is recommended but not required. However, customs forms and Flashboards will need to be created to display much of the data collected and already presented in BMC Smart Reporting views.
-- Forms and workflow developed using Remedy version 9.x.
-- Forms and workflow should work in previous versions of Remedy.
 
 Installation:
 ----------------
@@ -109,6 +109,7 @@ Authors
 ----------------
 - Forms and workflow developed by James Van Sickle
 - Remedy Action Request System developed by BMC Software
+- Remedy IT Service Management Suite developed by BMC Software
 - BMC Smart Reporting developed by BMC Software
 
 Release
